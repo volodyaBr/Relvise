@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+$maxWidth: 1440;
+$maxWidthContainer: 1050 + 30;
+$ff: 'Montserrat';
+$md1: $maxWidthContainer;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+
+$mainColor: #737373;
+$blackColor: #252B42;
+$greenColor: #0D5C63;
+$orangeColor: #FF7B47;
+
+@import "NullMyCss.scss";
+body {
+  font-family: $ff, sans-serif;
+  color: $mainColor;
+  &.lock {
+    overflow: hidden;
+  }
+}
+
+.container {
+  max-width: $maxWidthContainer + px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.ibg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.ibg img {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.page {
+  flex: 1 1 auto;
+  background-color: #fafafa;
+}
+@import "ui.scss";
+@import "my.scss";
+@import "header.scss";
+@import "footer.scss";
